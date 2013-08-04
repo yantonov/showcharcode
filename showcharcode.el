@@ -1,6 +1,18 @@
 (defvar scc/prefix "scc/")
 (defvar scc/adviced-functions (list 'forward-char
-                                    'backward-char))
+                                    'backward-char
+                                    'left-char
+                                    'right-char
+                                    'previous-line
+                                    'next-line
+                                    'forward-sentence
+                                    'backward-sentence
+                                    'forward-word
+                                    'backward-word
+                                    'forward-page
+                                    'backward-page
+                                    'beginning-of-buffer
+                                    'end-of-buffer))
 
 (defun scc/iterate-functions-to-advice (fn)
   (dolist (fn-to-advice scc/adviced-functions)
